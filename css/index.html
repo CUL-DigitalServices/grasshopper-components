@@ -22,6 +22,10 @@
 
 <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="../dist/css/font-awesome.css">
+    <link rel="stylesheet" href="../../grasshopper-ui/shared/gh/css/gh.base.css">
+    <link rel="stylesheet" href="../../grasshopper-ui/shared/gh/css/gh.components.css">
+    <link rel="stylesheet" href="../../grasshopper-ui/shared/gh/css/gh.skin.css">
 
   <!-- Optional Bootstrap Theme -->
 
@@ -696,15 +700,15 @@
       <tbody>
         <tr>
           <td><h1>h1. Bootstrap heading</h1></td>
-          <td class="type-info">Semibold 36px</td>
+          <td class="type-info">300 40px - #171717</td>
         </tr>
         <tr>
           <td><h2>h2. Bootstrap heading</h2></td>
-          <td class="type-info">Semibold 30px</td>
+          <td class="type-info">400 17px - #171717</td>
         </tr>
         <tr>
           <td><h3>h3. Bootstrap heading</h3></td>
-          <td class="type-info">Semibold 24px</td>
+          <td class="type-info">400 14px - #171717</td>
         </tr>
         <tr>
           <td><h4>h4. Bootstrap heading</h4></td>
@@ -2442,34 +2446,38 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
   <h2 id="buttons-options">Options</h2>
   <p>Use any of the available button classes to quickly create a styled button.</p>
   <div class="bs-example">
-    <button type="button" class="btn btn-default">Default</button>
-    <button type="button" class="btn btn-primary">Primary</button>
-    <button type="button" class="btn btn-success">Success</button>
-    <button type="button" class="btn btn-info">Info</button>
-    <button type="button" class="btn btn-warning">Warning</button>
-    <button type="button" class="btn btn-danger">Danger</button>
-    <button type="button" class="btn btn-link">Link</button>
+    <button type="button" class="btn btn-default"><i class="fa fa-calendar"></i>Primary</button>
+    <button type="button" class="btn btn-default gh-btn-secondary"><i class="fa fa-sign-out"></i>Secondary</button>
+    <div style="display: inline-block; background-color: #07525D;padding: 20px;">
+      <button type="button" class="btn btn-default gh-btn-secondary gh-btn-reverse"><i class="fa fa-print"></i>Secondary Reverse</button>
+      <button type="button" class="btn btn-default gh-btn-tertiary"><i class="fa fa-chevron-left"></i></button>
+      <button type="button" class="btn btn-default gh-btn-tertiary"><i class="fa fa-chevron-right"></i></button>
+    </div>
   </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- Standard button --&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<div class="highlight"><pre><code class="language-html" data-lang="html">
+<span class="c">&lt;!-- Primary button --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span>&gt;
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-calendar"</span><span class="nt">&gt;</span><span class="nt">&lt;/i&gt;</span>Primary
+<span class="nt">&lt;/button&gt;</span>
 
-<span class="c">&lt;!-- Provides extra visual weight and identifies the primary action in a set of buttons --&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="c">&lt;!-- Secondary button --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default gh-btn-secondary"</span>&gt;
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-sign-out"</span><span class="nt">&gt;</span><span class="nt">&lt;/i&gt;</span>Secondary
+<span class="nt">&lt;/button&gt;</span>
 
-<span class="c">&lt;!-- Indicates a successful or positive action --&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+<span class="c">&lt;!-- Secondary (reverse) button --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default gh-btn-secondary gh-btn-reverse"</span>&gt;
+  <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"fa fa-print"</span><span class="nt">&gt;</span><span class="nt">&lt;/i&gt;</span>Secondary Reverse
+<span class="nt">&lt;/button&gt;</span>
 
-<span class="c">&lt;!-- Contextual button for informational alert messages --&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
-
-<span class="c">&lt;!-- Indicates caution should be taken with this action --&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
-
-<span class="c">&lt;!-- Indicates a dangerous or potentially negative action --&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
-
-<span class="c">&lt;!-- Deemphasize a button by making it look like a link while maintaining button behavior --&gt;</span>
-<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre></div>
+<span class="c">&lt;!-- Tertiary button --&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default gh-btn-tertiary"</span>&gt;
+  <span class="nt">&lt;i</span> <span class="nt">class=</span><span class="s">"fa fa-chevron-left"</span><span class="nt">&gt;</span><span class="nt">&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default gh-btn-tertiary"</span>&gt;
+  <span class="nt">&lt;i</span> <span class="nt">class=</span><span class="s">"fa fa-chevron-right"</span><span class="nt">&gt;</span><span class="nt">&lt;/i&gt;</span>
+<span class="nt">&lt;/button&gt;</span>
+</code></pre></div>
 
   <div class="bs-callout bs-callout-warning">
     <h4>Conveying meaning to assistive technologies</h4>
